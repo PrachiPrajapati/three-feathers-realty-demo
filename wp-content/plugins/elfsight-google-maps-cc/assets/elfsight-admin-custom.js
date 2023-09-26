@@ -1,0 +1,11 @@
+/*
+    Elfsight Google Maps
+    Version: 2.1.0
+    Release date: Wed May 15 2019
+
+    https://elfsight.com
+
+    Copyright (c) 2019 Elfsight, LLC. ALL RIGHTS RESERVED
+*/
+
+!function(e,a,n){"use strict";a.add("api-key",e.noop),e(function(){var a,t,i,s,o,d,l="elfsight-admin-page-api-key-form",c=e(".elfsight-admin");e(".elfsight-admin-wrapper"),e(".elfsight-admin-page-api-key"),e(".elfsight-admin-page-api-key-container");a=s?s.find("."+l):e("."+l),t=a.find("."+l+"-input"),i=a.find("."+l+"-button-connect"),a.find("."+l+"-description-fail-message"),a.find("."+l+"-reload"),a.find("."+l+"-error-empty");var r=t.val();function f(a){e("."+l).removeClass([l+"-connect",l+"-success",l+"-fail"].join(" ")).addClass(l+"-"+a),c.toggleClass("elfsight-admin-api-key-invalid","success"!==a),o=a,"success"===a?(t.attr("readonly",!0),i.text("Clear API key").addClass("elfsight-admin-button-gray").removeClass("elfsight-admin-button-green")):(t.attr("readonly",!1),i.text("Save API key").addClass("elfsight-admin-button-green").removeClass("elfsight-admin-button-gray"))}function u(a){return e.post(ajaxurl,{action:"elfsight_google_maps_update_api_key",api_key:a,nonce:t.attr("data-nonce")})}function g(e){return e&&/^(.{39})$/.test(e)}g(r)?f("success"):f("connect"),n.addEventListener("message",function(e){var a=e.data;a.action&&~a.action.search("EappsPreview.appPreferences.updated")&&(d=a.data).apiKey&&(r=d.apiKey)!=t.val()&&(t.val(r).attr("readonly",!0),i.text("Clear API key").addClass("elfsight-admin-button-gray").removeClass("elfsight-admin-button-green"),f("success"),u(r).then(function(){document.location.reload()}))}),i.click(function(){if("success"===o&&t.val(""),r!==t.val()||""===t.val()){if(""===(r=t.val()))return"success"===o&&(a.addClass(l+"-reload-active"),u(r).then(function(){document.location.reload()})),void f("connect");""!==r&&g(r)?(f("success"),a.addClass(l+"-reload-active"),u(r).then(function(){document.location.reload()})):f("fail")}})})}(window.jQuery,window.elfsightAdminPagesController||{},window);

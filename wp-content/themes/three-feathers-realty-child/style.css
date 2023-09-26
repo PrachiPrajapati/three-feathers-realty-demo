@@ -1,0 +1,1037 @@
+/*
+Theme Name: Three Feathers Realty child
+Description: child theme of Three Feathers Realty
+Version: 1.0.0
+Text Domain: Three Feathers Realty
+Template: three-feathers-realty
+Tags: blog, news, e-commerce
+*/
+@import url(../three-feathers-realty/style.css);
+*:focus {outline: none !important;}
+h1,h2,h3,h4,h5,h6,p,a ,ul,li                                                { font-family: 'Inter', sans-serif !important; }
+h1	                                                                        { font-size: 40px; line-height: 60px; font-weight: 700; color:#fff; text-transform: uppercase; }
+h2	,h2.faq-title a								                                        { font-size: 32px; line-height: 48px; font-weight: 700;  text-transform: uppercase;  }
+h3									                                        { margin-bottom: 16px; font-size: 24px; line-height: 36px; font-weight: 500; }
+h4	,.accordion-button								                        { font-size: 20px; line-height: 30px; }
+p 									                                        { margin-bottom: 24px; font-size: 16px; line-height: 24px; font-weight: 400; color:#333333; }
+a                                                                           { font-size: 16px; line-height: 24px; color:#666; display: inline-block; text-decoration: none; color:#333; }
+a:hover,a:focus                                                             { text-decoration: none; color:#000; }
+body                                                                        { font-family: 'Inter', sans-serif !important; font-size: 16px; line-height: 24px;  }
+ul li , ol li                                                               { color:#333; }
+ul                                                                          { padding-left:0; }
+h2.faq-title a                                                              { text-transform: lowercase !important; }
+/* Common Css Start */
+/* Loading btn */
+.loading-btn                                                                { text-align:center; }
+.loading-btn img                                                            { height:110px; width:110px; display: inline-block; }
+.wp-block-columns .wp-block-column > *                                      { margin:0;    }
+.common-space                                                               { padding:100px 0; }
+.common-space-small                                                         { padding:60px 0;}
+.bottom-footer-padding                                                      { padding-bottom: 320px; }
+.bottom-footer-padding-small                                                { padding-bottom:260px; }
+.color-black                                                                { color:#000000;  }
+.color-gray                                                                 { color:#666666;}
+.wp-block-button.common-btn a.wp-block-button__link,.theme-btn, .primary-navigation .primary-menu-container > ul > .menu-item.action-btn a,.wpcf7-submit.theme-btn  { padding:10px 32px; letter-spacing: 0; display: inline-block; font-size: 16px; line-height: 24px; border:2px solid #000; border-radius: 4px; background-color: #000; color:#fff; text-transform: uppercase; transition:all 0.5s ease;  }
+.theme-btn:hover,.wp-block-button.common-btn a.wp-block-button__link:hover,.wp-block-button.common-btn a.wp-block-button__link:focus,.theme-btn:focus ,.primary-navigation .primary-menu-container > ul > .menu-item.action-btn a:hover,.primary-navigation .primary-menu-container > ul > .menu-item.action-btn a:focus ,.wpcf7-submit.theme-btn:hover,.wpcf7-submit.theme-btn:focus { color:#000; background-color: transparent; }
+.theme-btn.white-bg,.wpcf7-submit.theme-btn.white-bg                                                         { border-color: #fff; color:#000; background-color: #fff;  }
+.theme-btn.white-bg:hover,.theme-btn.white-bg:focus,.theme-btn.white-bg:active ,.wpcf7-submit.theme-btn.white-bg:hover,.wpcf7-submit.theme-btn.white-bg:focus,.wpcf7-submit.theme-btn.white-bg.active{ color:#fff !important; background-color: transparent; }
+.post-thumbnail, .entry-content .wp-audio-shortcode, .entry-content > :not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce), [class*="inner-container"] > :not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce), .default-max-width { max-width: 100%; }
+.site-main                                                                  { padding:0; margin-top:101px; }
+.slick-arrow.slick-prev,.slick-arrow.slick-next                             { position:absolute; right:196px; top:100%; transform:translate(0 ,-50%); height: 64px; width: 64px; font-size:0; border-radius: 4px; background-color:#000;  z-index: 1; transition: all 0.3s ease;} 
+.slick-arrow.slick-next                                                     { right:92px;  }
+button:not(.toggle).slick-prev,button:not(.toggle).slick-next               { border:none; }
+.slick-arrow.slick-prev:after,.slick-arrow.slick-next:after                 { content:"\f0d9"; font-weight: bold; font-family: 'Font Awesome 5 Free'; display: flex; justify-content: center; align-items: center;  position: absolute; height: 100%; width: 100%; top: 0px; left: 0; font-size: 30px; line-height: 40px; color:rgba(255, 255, 255, 0.64);}
+.slick-arrow.slick-next:after                                               {  content:"\f0da";  }
+ .slick-prev:hover:after,.slick-next:hover:after                            { color:#fff; } 
+.bg-light                                                                   { background-color: #F5F5F5; }
+.wp-block-columns .wp-block-column > .heading ,#content .entry-content .wp-block-kadence-rowlayout.alignfull.heading  ,h2.widgettitle  ,.heading-box ,#content .entry-content .wp-block-kadence-rowlayout.alignfull.heading.has-subtitle h2   { margin-bottom: 24px; }
+.wp-block-columns.alignfull .wp-block-column p:not(.has-background), .wp-block-columns.alignfull .wp-block-column h1:not(.has-background), .wp-block-columns.alignfull .wp-block-column h2:not(.has-background), .wp-block-columns.alignfull .wp-block-column h3:not(.has-background), .wp-block-columns.alignfull .wp-block-column h4:not(.has-background), .wp-block-columns.alignfull .wp-block-column h5:not(.has-background), .wp-block-columns.alignfull .wp-block-column h6:not(.has-background)        { padding:0; }
+.wp-block-columns .wp-block-column > figure ,.wp-block-columns .wp-block-column > p,.entry-content > * ,.wp-block-columns  ,.wp-block-columns .wp-block-column >  .wp-block-buttons  , .wp-block-buttons  .wp-block-button ,.wp-block-column:not(:first-child)  ,.site-main > *  ,.widget > *  ,.site-main > article > *    { margin:0; }
+p:empty                                                                     { margin:0 !important; display: none; }
+.feathers                                                                   { position: relative; overflow: hidden; }
+.feathers:before                                                            { content:""; position: absolute; height: 300px;  width: 135px; top:20px; left:-30px; background: url('http://webprojects.cloud/wordpress/three-feathers-realty/wp-content/uploads/2021/02/pink-feather.png')no-repeat left top/90% auto;  }
+.feathers.yellow-feathers:before                                            { background-image: url('http://webprojects.cloud/wordpress/three-feathers-realty/wp-content/uploads/2021/02/yellow-feather.png'); left:auto; right:-35px; width: 168px; height: 330px; background-size: 92% auto; }
+.feathers.blue-feathers:before                                              { background-image: url('http://webprojects.cloud/wordpress/three-feathers-realty/wp-content/uploads/2021/02/blue-feather.png'); top:auto; bottom:0; left:-30px;  width: 170px; height:247px; background-size: 70% auto;  }
+.site-logo .custom-logo  ,.custom-logo-link                                 { max-width: 100%; }
+.site .button:focus, input[type="submit"]:focus, input[type="reset"]:focus, .wp-block-search__button:focus, .wp-block-button .wp-block-button__link:focus { outline: none; }
+.site-main > article > *                                                    { margin-bottom: 0; }
+.btn-box                                                                    { margin:40px 0 0; }
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button)       { outline:none; text-decoration: none; }
+p.sub-title                                                                 { max-width:47%; margin:0 auto; } 
+.banner-info-box .banner-subtitle                                           { margin:4px 0 0; }
+.banner-info-box .banner-image img                                          { max-width: 100%; }
+.feathers.rotate-feathers::before                                           { transform:rotateY(180deg); }
+/* Common Css End */
+/* Header Css Start */
+.site-header                                                                { padding:10px 60px; position: fixed; top:0; left:0; width: 100%; max-width: 100%; z-index: 999; background-color: #fff; transition: all 0.5s ease; }
+.site-header.header-style                                                   { padding:6px 60px; box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.32); }
+.site-logo ,.site-branding  ,.primary-navigation .primary-menu-container    { margin:0 !important; transition: all 0.5s ease; }
+.site-header.header-style .site-branding                                    { width: 100px; }
+.site-logo span                                                             { display: inline-block; }
+.site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) img   { outline: none; }
+.primary-navigation > div > .menu-wrapper                                   { align-items: center; }
+.primary-navigation .primary-menu-container > ul > .menu-item               { margin:0 20px;  }
+.primary-navigation .primary-menu-container > ul > .menu-item.menu-item-has-children > a{ padding:8px 0; }
+.primary-navigation .primary-menu-container > ul > .menu-item.action-btn    { margin-right:0; }
+.primary-navigation .primary-menu-container > ul > .menu-item > a           { padding:0; font-size: 16px; line-height: 24px; color:#666666; text-transform: uppercase; text-decoration: none !important; font-family: 'Inter', sans-serif ;  }
+.primary-navigation .primary-menu-container > ul > .menu-item:hover > a,.primary-navigation .primary-menu-container > ul > .menu-item:focus > a ,.primary-navigation .primary-menu-container > ul > .menu-item.current-menu-item.current_page_item > a ,.has-background-white .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button),.primary-navigation .primary-menu-container > ul > .menu-item:hover .icon-plus:after, .primary-navigation .primary-menu-container > ul > .menu-item:hover .icon-minus:after ,.primary-navigation .primary-menu-container > ul > .menu-item:focus .icon-plus:after ,.primary-navigation .primary-menu-container > ul > .menu-item:focus .icon-minus:after{ color:#000000; background-color: transparent;   }
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle                  { width:40px; height: auto;  }
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-plus ,.primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-minus { position: relative; }
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-plus .svg-icon ,.primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-minus .svg-icon { display: none; }
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-plus:after,.primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-minus:after { content: '\f0d7'; font-weight: bold; font-family: 'Font Awesome 5 Free'; position: absolute; width: 100%; font-size: 18px; line-height: 22px; color:#666666;  }
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-minus:after{ content: '\f0d8';  }
+.primary-navigation > div > .menu-wrapper > li > .sub-menu                  { padding:0;  border:none; background-color: #F5F5F5; }
+.primary-navigation > div > .menu-wrapper > li > .sub-menu:before           { display: none; }
+.primary-navigation > div > .menu-wrapper > li > .sub-menu li               { background: none; }
+.primary-navigation > div > .menu-wrapper > li > .sub-menu li a             { padding:8px; font-size: 14px; line-height: 21px; font-family: 'Inter', sans-serif ; text-transform: uppercase; color:#666; }
+.primary-navigation > div > .menu-wrapper > li > .sub-menu li:hover a,.primary-navigation > div > .menu-wrapper > li > .sub-menu li:focus a  ,.primary-navigation > div > .menu-wrapper > li > .sub-menu li.current-menu-item a   { text-decoration: none !important; color:#000 !important;  }
+.primary-navigation > div > .menu-wrapper > li > .sub-menu::after           { display:none; }
+/* Header Css End */
+/* Banner Section Css Start */
+.banner-section                                                             { padding:60px; display: flex; align-items:flex-end; min-height:calc(100vh - 150px); background-repeat: no-repeat; background-position: center center; background-size: cover; }
+.banner-desc                                                                { padding:40px; background-color:  rgba(0, 0, 0, 0.72); }
+.banner-section h1                                                          { margin-bottom:24px; }
+.banner-section p                                                           {  color:#e6e6e6; }
+/* Banner Section Css End */
+/* About Us Section Css Start */
+.about-us-section.feathers  ,.happenings-section.feathers ,.left-blue-feather.feathers     { overflow:visible; }
+.wp-block-column.about-img-box                                              { position: relative; display: flex; }
+     .about-2 ,.wp-block-column.about-img-box .about-1 { box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.16); }
+.wp-block-column.about-img-box .about-2                                     { position: absolute; right:22%; top:10%;  }
+.wp-block-columns .wp-block-column.about-us-desc > p                        { padding: 0; margin-bottom: 16px; }
+.wp-block-columns .wp-block-column.about-us-desc                            { padding-right: 25px; }
+.wp-block-columns .wp-block-column.about-us-desc  .common-btn               { margin-top:8px; }
+/* ABout Us Section Css End */
+.about-us-section.common-space ,.projects-section.common-space               { padding-bottom: 0; }
+.projects-section.successful-project.common-space                            { padding-bottom: 100px; }
+/* Project Section Css Start */
+.successful-project .wp-block-columns .wp-block-column.about-us-desc        { padding-left: 15px; padding-right: 0;  } 
+.wp-block-column.project-img-box                                            { margin:0 -15px; position: relative; display: flex; flex-wrap: wrap; }
+.wp-block-column.project-img-box figure                                     { padding:0 15px; width: 50%; }
+.wp-block-column.project-img-box figure.big-img:first-child img             { margin-right: 0; margin-left: auto; }
+.wp-block-column.project-img-box figure.small-img                           { margin:30px 0; }
+.wp-block-column.project-img-box figure.small-img:last-child  img           { margin-top: 30px;  }
+.wp-block-column.project-img-box figure.small-img:first-child  img          { margin-bottom: 30px;   }
+.wp-block-column.project-img-box figure.center-logo                         { padding:10px; position: absolute; top:50%; left:50%; transform: translate(-50%,-50%); display: flex; justify-content: center; align-items: center; width: 140px; height: 140px; background-color: #fff; border-radius: 50%; }
+/* Project Section Css End */
+/* Testimonial Section Css Start */
+.testimonial-slider                                                         { margin-top:52px;   }
+.testimonial-slider .items .img-box                                         { margin-bottom: 32px; width: 120px; height: 120px; border-radius: 50%; overflow: hidden; }
+.slick-dots                                                                 { padding:0; margin-top:15px;  margin-left:0;  width:100%;  display: flex; justify-content: center; list-style: none; }
+.slick-dots li                                                              { margin:0 6px; position: relative;  width: 8px; height: 8px; padding: 0; cursor: pointer;}
+.slick-dots li:first-child                                                  { margin-left:0;}
+.slick-dots li button                                                       { position: absolute; padding:0; font-size: 0; line-height: 0;  width: 8px; height: 8px;   border:0; border-radius: 50%; background: rgba(0, 0, 0, 0.32); cursor: pointer;}
+.slick-dots li.slick-active button                                          { background: #000; outline: none; } 
+/* Testimonial Section Css End */
+/* Faq's section start */
+.faqs-section.feathers.yellow-feathers:before                               { max-width: 80%; transform: rotate(-12deg); right: -69px; top: -6px; background-size: 70% auto; }
+.accordion-button                                                           { padding:0; border:0; text-align: left;  }
+.accordion-button::after                                                    { padding:0 10px;content: '\f0d7'; font-weight: bold; font-family: 'Font Awesome 5 Free'; background: none; width: auto; height: auto; }
+.accordion-button:not(.collapsed)::after                                    {  background: none; }
+.accordion-button:not(.collapsed)                                           { color:#000; background-color: transparent; }
+.accordion-button:focus                                                     { border:0; box-shadow:none; }
+.accordion-body                                                             { padding:0 24px 0 0 ; margin-top:16px;  }
+.accordion-collapse                                                         { border:0; }
+.accordion-item                                                             { padding:24px 0; border-bottom:1px solid #E5E5E5; }
+.accordion-body p                                                           { margin-bottom: 0; }
+/* faq's section end */
+/* Footer Section Css Start */
+.contact-us-page.feathers.blue-feathers:before                              { top:5%; bottom:auto; transform:rotate(5deg); }
+.feather-after.feathers:after                                             { content: ""; position: absolute;     bottom: -20px; right: -10px; width: 109px; height: 230px; background: url('http://webprojects.cloud/wordpress/three-feathers-realty/wp-content/uploads/2021/02/yellow-feather.png') no-repeat left top/98% auto; }
+.current-opening.feather-after.feathers:after                               { bottom:20px; }
+.no-widgets .site-footer                                                    { padding:0; margin-top:0; background-color: #333333; max-width:100%; }
+.contact-info-section                                                       { margin:-220px 0 0; box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.16); position: relative; z-index: 99; }
+.contact-info-section .contact-form ,.contact-info-section .contact-info    { padding-left:40px; padding-right:40px; background-color: #000; height:100%; }
+.contact-form h2.widgettitle                                                {  color:#fff; }
+.contact-info.feathers::before                                              { background-size: 81% auto; left:auto; right:-6%; top:auto; bottom:0; transform: rotateY(180deg); height: 208px; }
+.widget-area                                                                { padding:0; margin-top:0px; display: block;  }
+.contact-info-section .contact-info                                         { background-color: #fff;}
+.contact-info li .icon i                                                    { font-size:22px; line-height:28px; }
+.contact-info li .icon-desc > *                                             { margin-bottom: 0; font-size: 16px; line-height: 24px; text-decoration: none; color:#333; }
+.contact-info li .icon-desc a:hover,.contact-info li .icon-desc a:focus     { text-decoration: underline; }
+.contact-info li .icon-desc                                                 { margin-left: 24px; }
+.contact-info li                                                            { margin-bottom: 18px; }
+.widget-area ul li                                                          { line-height: unset; }
+.form-group                                                                 { margin-bottom: 16px;}
+.form-group .wpcf7-form-control                                             { padding:12px 16px; border:1px solid #333; width:100%; font-size: 16px; line-height: 24px; outline:none; background-color: transparent; border-radius: 4px; height:48px; color:#fff;  }
+.form-group .wpcf7-form-control:focus                                       { border-color:#fff; outline:none; color:#fff; }
+.form-group .wpcf7-form-control:focus::placeholder                          { color:#fff; }
+.form-group .wpcf7-form-control::placeholder                                { text-transform: capitalize; color:#A3A3A3; }
+.form-group .wpcf7-form-control.wpcf7-textarea                              { height: 112px; resize: none; }
+.form-group .wpcf7-form-control.wpcf7-select                                { color:#A3A3A3; }
+.contact-form-content .form-group .wpcf7-form-control.wpcf7-select:focus    { color:#A3A3A3; }
+.form-group .wpcf7-form-control.wpcf7-select:focus                          { color:#333; }
+.follow-us                                                                  { margin-top:60px; }
+.follow-us   h3                                                             { margin-bottom: 24px; font-weight: bold; }
+.follow-us .footer-navigation-wrapper                                       { justify-content: flex-start; }
+.follow-us .footer-navigation                                               { margin:0; }
+.follow-us .footer-navigation-wrapper li                                    { margin: 0 8px; }
+.follow-us .footer-navigation-wrapper li a                                  { padding:0; }
+.footer-navigation-wrapper li .svg-icon                                     { fill:#000 !important; width:32px; height:32px; }
+.follow-us .footer-navigation-wrapper li.facebook:hover .svg-icon           { fill:#3B5998 !important; }
+.follow-us .footer-navigation-wrapper li.twitter:hover .svg-icon            { fill:#1DA1F2 !important; }
+.follow-us .footer-navigation-wrapper li.google-plus:hover .svg-icon        { fill:#db4a39 !important; }
+.follow-us .footer-navigation-wrapper li:first-child                        { margin-left:0; }
+.wpcf7-not-valid-tip,.wpcf7-response-output                                 { padding-left:2px; margin-top: 10px; font-size: 12px; line-height: 15px; color:red;  }
+.site-footer > .site-info .powered-by                                       { padding:24px 45px ; margin:0; display: block; font-size: 12px; line-height: 18px; border-top:1px solid #3d3d3d; color:#B8B8B8;}
+.site-footer > .site-info                                                   { padding:0;  margin:0; justify-content: center; border:0; }
+.site-footer > .footer-menu-bar                                             { margin:38px 0; }
+.footer-menu-bar .menu                                                      { padding:0; display: flex; justify-content: center; align-items: center; list-style: none;  }
+.footer-menu-bar .menu li                                                   { margin:0 20px; }
+.footer-menu-bar .menu li a                                                 { color: #a3a3a3;  }
+.footer-menu-bar .menu li.footer-logo a                                     { width:89px; height: 65px; background: url('http://webprojects.cloud/wordpress/three-feathers-realty/wp-content/uploads/2021/02/footer-logo.png')no-repeat center center; text-indent: -9999px; }
+.footer-menu-bar .menu li a:hover,.footer-menu-bar .menu li a:focus ,.footer-menu-bar .menu li.current-menu-item a  { color:#fff !important; font-weight: 400; }
+/* contact Page Footer  */
+/* map */
+#eapps-google-maps-1.eapps-google-maps                                      { width:100%; height:510px !important; }
+.contact-info-section.contact-page-footer .contact-info.feathers::before    { right: -2%; }
+.contact-info-section.contact-page-footer .contact-information              { display:flex; justify-content:center;   }
+.contact-info-section.contact-page-footer .contact-information li           { display:block !important; margin:0 30px; width:33.33%; }
+.contact-info-section.contact-page-footer .contact-information li .icon-desc { margin:16px 0 0; }
+.contact-info-section.contact-page-footer .follow-us .footer-navigation-wrapper     { justify-content:center; }
+/* Footer Section Css End */
+/* About Us Page Start */
+.about-page.feathers::before                                                { left:-22px; background-size: 75% auto; top: auto; bottom: -35%; height: 261px;}
+.about-page.about-us-section.common-space                                   { padding-bottom: 200px; } 
+.singular .entry-header                                                     { display: none;  }
+.featured-img-banner                                                        { padding:0; margin-bottom: 0; height: 250px; display: flex; align-items: center; background-color: #000;  }
+.singular .entry-header h1                                                  { border:0; }
+.about-page .wp-block-column.about-img-box .about-2                         { right:4%; bottom:-31%; top:auto;  }
+.about-page .wp-block-columns .wp-block-column.about-us-desc                { padding-left:15px; padding-right: 0px; }
+/* Our Team Section Start */
+.team-section.feathers.feathers.yellow-feathers:before                      { background-size: 54% auto; bottom: -7%; top: auto; height: 240px; right: -6%; width: 200px; transform: rotate(-5deg);  }
+.wp-block-columns .wp-block-column > .about-team                                                                 { margin-top:-50px; }
+.out-team-black-bg                                                          { height:130px; background-color: #000; }
+.about-team .team                                                           { padding:32px 20px; background-color: #fff; box-shadow: 1px 8px 24px rgba(0, 0, 0, 0.08); }
+.about-team .team-box                                                       { margin-bottom: 30px; }
+.about-team .team .img-item                                                 { width:100px; height:100px; border-radius:50%; overflow: hidden;}
+.about-team .team .team-desc                                                { margin-top:16px;}
+.about-team .team .member-name                                              { margin-bottom: 8px; }
+.about-team .team p.position                                                { font-weight: 400; }
+.wp-block-columns.team-section-block                                        { margin-bottom: 20px !important; }
+.team-section p:last-child                                                  { margin-bottom: 0 !important; }
+/* Our Team Section End */
+/* ABout Us Page End */
+/* Career Page Start */
+.container                                                                  { padding:0; }
+.job-box                                                                    { margin:12px 0; }
+.job-box a                                                                  { display:block; }
+.feathers.three-feathers::before                                            { top:-10%; left:auto; right:-10%; background-image: url('http://webprojects.cloud/wordpress/three-feathers-realty/wp-content/uploads/2021/02/three-feathers.png'); height:221px; width:212px; }
+.job-post-box                                                               { padding:44px; background-color: #fff; box-shadow: 1px 8px 24px rgba(0, 0, 0, 0.08); transition: all 0.5s ease;  }
+.job-post-box:hover                                                         { transform: scale(1.04,1.04); }
+.job-post-box h3                                                            { color:#000 !important;}
+.job-post-box a:hover h3                                                    {  text-decoration: underline !important; }
+.current-opening-jobs                                                       { padding-left: 0; display: flex; flex-wrap: wrap; list-style:none;  }
+.current-opening-jobs li                                                    { margin:16px 0; width:36%; }
+.current-opening-jobs li:nth-child(even)                                    { width:64%; }
+.current-opening-jobs li p                                                  { margin-bottom: 16px; }
+.current-opening-jobs li p.job-post-desc                                    { font-weight: 500; }
+.current-opening-jobs li:last-child,.current-opening-jobs li:nth-last-child(2) ,.current-opening-jobs li:last-child p,.current-opening-jobs li:nth-last-child(2) p { margin-bottom:0; }
+/* Career Page End */
+/* Career Inner Page Start*/
+.career-contact-form.common-space                                           { padding-top:40px; }
+.career-contact-form.common-space.bottom-footer-padding                     { padding-bottom:260px; }
+.career-job-details h3                                                      { margin-top:40px; margin-bottom: 24px; text-transform: uppercase; font-weight: 700; }
+.career-job-details ul                                                      { padding-left:15px; }
+.career-job-details ul li                                                   { margin-bottom: 16px; }
+.other-jobs > h3                                                            { margin-bottom: 40px; }
+.other-job-detail                                                           { padding-left:0; list-style:none;  }
+.other-job-detail li                                                        { padding-left:16px; margin-bottom:32px; border-left:4px solid #a3a3a3; }
+.other-job-detail li:hover                                                  { border-color:#000; }
+.other-job-detail li a:hover                                                { text-decoration: underline !important; color:#000; }
+.other-job-detail li p                                                      { margin-bottom:0; font-weight:500; }
+.contact-form.detail-form                                                   { padding:40px; background-color: #fff; box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.16); }
+.contact-form.detail-form h3                                                { margin-bottom:0px; font-weight: bold; }
+.contact-form.detail-form .form-group .wpcf7-form-control                   { color:#A3A3A3; border:1px solid #A3A3A3;  }
+.career-inner-desc                                                          { margin-top:40px; }
+.career-inner-desc .current-opening-jobs li                                 { width:100%; }
+/* Career Inner Page End */
+/* Happening TFR Start */
+.happenings-section.feathers.blue-feathers:before                           { background-size: 72% auto; bottom:auto; top:82%; left:-20px; height:295px; transform:rotate(14deg); }
+.wp-block-column.tfr-img-box                                                { margin-top:-84px; position: relative; display: flex; justify-content: center; }
+.wp-block-column.tfr-img-box .tfr-2 ,.wp-block-column.tfr-img-box .tfr-1    { max-width:36%; box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.16); }
+.wp-block-column.tfr-img-box .tfr-2                                         { position: absolute; right:4%; top:24%;  }
+.news-slider-section.common-space                                           { padding-top:65px; }
+.news-slider-section.feathers.yellow-feathers::before                       { background-size: 70% auto; height: 270px; width: 180px; right: -3%; top: 52%; }
+.news-slider-section .news-tfr-slider .news-items .tfr-box                  { min-height:300px; position:relative; background-repeat: no-repeat !important; background-position: left top !important; background-size: cover !important; transition:all 0.5s ease; }
+.news-slider-section .news-tfr-slider .news-items .tfr-box:after            { opacity: 0; content:""; position: absolute; top:0; left:0; height:100%; width:100%; background:rgba(0, 0, 0, 0.64); transition:all 0.5s ease;  }
+.news-slider-section .news-tfr-slider .news-items .tfr-box:hover:after      { opacity: 1; }
+.news-slider-section .news-tfr-slider .news-items .tfr-box .tfr-desc        { position:relative; z-index:10; display:none;transition:all 0.5s ease; }
+.news-slider-section .news-tfr-slider .news-items .tfr-box:hover .tfr-desc  { display: block; }
+.news-slider-section .news-tfr-slider .news-items .tfr-box .tfr-desc h3     { margin-bottom:8px; }
+.news-slider-section .news-tfr-slider .news-items                           { margin:0 15px; }
+.arrows-small .slick-arrow.slick-prev,.arrows-small .slick-arrow.slick-next { left:-30px; right:auto;  top:50%; transform:translate(-50% ,-50%); height: 40px; width: 40px; } 
+.arrows-small .slick-arrow.slick-next                                       { left:auto;  right:-30px; transform:translate(50% ,-50%);}
+.arrows-small .slick-arrow.slick-prev:after,.arrows-small .slick-arrow.slick-next:after { font-size: 18px; line-height: 24px;   }
+/* Happerning TFR End */
+/* Flock Homes Page Start */
+.flock-page-info.feathers.blue-feathers::before                             { background-size: 85% auto; bottom:-3%; left:-13px; width: 131px; height: 240px;  }
+.pink-right.feathers::before                                                { left:auto; top: auto; height: 189px; width: 110px; right: -12px;  background-size: 88% auto; bottom: 0; }
+.pink-right.farm-house-section.feathers::before                             { bottom:-6%; }
+.left-yellow-feathers.feathers.rotate-feathers.yellow-feathers::before   { right: auto; top:8%; width: 180px; height: 300px; left: -3%; background-size: 80% auto; transform: rotateY(180deg) rotate(-4deg); }
+.site-plan-section.feathers.blue-feathers::before                           { left:auto; top:0%; height: 278px; width: 149px; right: -12px;  background-size: 88% auto; }
+.specification-section.feathers::before                                     { height: 226px; width: 133px; left:-6px; background-size: 85% auto; }
+.project-status-section.feathers.yellow-feathers::before                      { height: 226px; width: 133px; right: -2.1%; background-size: 79% auto; transform: rotate(-5deg); }
+/* menu */
+.inner-navigation                                                           { position:sticky; top:84.63px;  transition:all 0.3s ease; z-index:200; }
+.inner-navigation ul.menu                                                   { padding:18px 0; margin:0; background-color: #E5E5E5; display:flex; align-items: center; justify-content:center; list-style-type: none;  }
+.inner-navigation ul.menu li                                                { margin:0 16px; }
+.inner-navigation ul.menu li a                                              { font-size:14px; line-height:21px; font-weight:500; text-transform: uppercase;}
+.inner-navigation ul.menu li a:hover,.inner-navigation ul.menu li a:focus,.inner-navigation ul.menu li a.menu-active  ,.inner-navigation ul.menu li a.menu-active:focus                                { color:#000; text-decoration:underline; }
+#content .entry-content .features-section .wp-block-kadence-rowlayout.alignfull.heading,#content .entry-content .wp-block-kadence-rowlayout.alignfull.heading.has-subtitle,#content .entry-content .location-section .wp-block-kadence-rowlayout.alignfull.heading ,#content .entry-content .farm-house-section .wp-block-kadence-rowlayout.alignfull.heading,#content .entry-content .gallery-slider-section .wp-block-kadence-rowlayout.alignfull.heading { margin-bottom: 40px; }
+.features-section .wp-block-column.feature-box                              { margin:0 80px; }
+.features-section .wp-block-column.feature-box h4                           { font-weight: 500;  }
+.farm-house-section   .wp-block-column.active-passive-box                   { padding:49px 60px;  margin:0 15px; background-color: #fff; box-shadow: 1px 8px 24px rgba(0, 0, 0, 0.08); }
+.farm-house-section   .wp-block-column.active-passive-box h3                { padding:0 15px; margin-bottom:32px; }
+/* gallery */
+.gallery-slider-section .gallery-slider .gallery-items .image-box           { padding-top:70%; margin:0 15px; display: block; background-repeat: no-repeat !important; background-position: left top !important; background-size: cover !important; transition:all 0.5s ease; }
+/* location */
+.location-section .wp-block-column.location-img-box .loc-img                { padding-bottom:24px; }
+.location-section .wp-block-column.location-img-box .loc-img img            { box-shadow: 0 0 24px rgba(0, 0, 0, 0.08); }
+/* site-plan */
+.site-plan-img-box                                                          { padding: 20px 0; background-color: #EFEDD6; }
+/* specification */
+ .spec-list                                                                 { padding-left:15px;   }
+ .spec-list li                                                              { margin-bottom:8px; color:#333; }
+ .wp-block-columns .wp-block-column.specification-table-box                 { padding-right:30px; }
+ .wp-block-columns .wp-block-column.specification-table-box .specification-table table    {  box-shadow: 0 0 24px rgba(0, 0, 0, 0.08);  }
+  .wp-block-column.specification-table-box .specification-table table thead ,  .wp-block-column.specification-table-box .specification-table table tbody { border:none; font-size:14px; line-height:21px; }
+  
+  .wp-block-column.specification-table-box .specification-table table thead th  { background-color:#000; color:#A3A3A3; text-transform:uppercase; font-weight:500;  }
+  .wp-block-column.specification-table-box .specification-table table  th ,.wp-block-column.specification-table-box .specification-table table  td { padding:12px 33px;  font-family: 'Inter', sans-serif !important; border:0;  border-right:1px solid #fff; } 
+  .wp-block-column.specification-table-box .specification-table table  tbody tr:nth-child(even)  {  background-color: #F5F5F5; }
+  .spec-list.feature-lists                                                  { padding-left: 0; max-width: 80% !important; margin:0 auto !important;  }
+  .spec-list.feature-lists li                                               { width:calc(50% - 30px); margin-left:15px; margin-right: 15px; }
+  /* Flock Homes Page End */
+  .morden-amenities-section.common-space                                      { padding-bottom:70px; }
+  /* Trinity Page Start */
+.trinity-section.feathers::before                                           { background-size: 90% auto; height: 250px; width: 140px; right:0px; transform: rotateY(180deg) rotate(10deg);   }
+.trinity-info-section.feathers.blue-feathers:before                         { bottom: -10%; height: 241px; background-size: 61% auto; z-index:-1; }
+.trinity-location.feathers.yellow-feathers:before                           { height: 220px; width: 133px; top:auto; bottom:0; right: -2.1%; background-size: 79% auto; transform: rotate(-5deg);  }
+.trinity-section .img-heading img                                           { margin-right:8px; display:inline-block; }
+.trinity-info-section.about-page.about-us-section.common-space              { padding-bottom:200px; }
+.trinity-info-section.about-page .wp-block-columns .wp-block-column.about-us-desc { padding-right:15px; margin-bottom:0; }
+.testimonial-single.bottom-footer-padding                                   { padding-bottom:230px; }
+/* Trinity Page End */
+.current-opening p.sub-title                                                { max-width: 65%; }
+/* Active+Passive Page Start */
+.right-bottom-feathers.feathers:before                                       { height: 218px; width: 110px; background-size: 95% auto; left: auto; top:auto; bottom:10%; right:-1%; }
+.left-blue-feather.feathers.blue-feathers:before                            { height: 218px; width: 110px; top:0%; transform: rotate(7deg); background-size: 95% auto; left: -7px;  }
+.page-title                                                                 { padding:57px 0 0; }
+.page-title h1                                                              { margin-bottom:8px; }
+.organic-desc-box .wp-block-group .wp-block-group__inner-container p        { margin:0 0 24px }
+.organic-desc-box .wp-block-group .wp-block-group__inner-container h3       { margin:0 0 16px; }
+.wp-block-columns .wp-block-column.organic-desc-box                         { margin:0 ; padding-right:24px; }
+.wp-block-columns .wp-block-column.organic-desc-box .wp-block-group         { margin:0; }
+.wp-block-columns .wp-block-column.organic-desc-box.padding-right           { padding-right:0; padding-left:24px;  }
+.organic-food-img-box .wp-block-group.food-img-content                      { margin:0; position:relative; }
+.organic-food-img-box .wp-block-group.food-img-content .wp-block-group__inner-container { display:flex; }
+.organic-food-img-box .wp-block-group.food-img-content .food-img-1          { margin:0 0 30px !important; }
+.organic-food-img-box .wp-block-group.food-img-content .food-img-2          { margin-top:0; position:absolute; top:42%; left:31%; } 
+.wp-block-columns.amenities-box                                             { margin:0 -15px; }
+.wp-block-columns .wp-block-column.features-items                           { margin:0 0 30px; padding:0 15px; }
+.wp-block-columns .wp-block-column.features-items    h4                     { margin:16px 15px 0; font-weight:400; text-transform: capitalize; }
+/* Active+passive Page End */
+/* 404 Page  */
+.error-404  h1                                                              { color:#000; font-weight: 900; font-size:150px; line-height:160px; }
+.error-404  h2                                                              { text-transform: capitalize; font-weight: 600; }
+.error404 main p                                                            { margin-bottom:16px; }
+.wpcf7 form.sent .wpcf7-response-output                                     { border-color:#ffb900; color:#46b450; }
+/* Responsive Css Start */
+@media(min-width:768px) and (max-width:1199px){
+   
+    p 									                                        { margin-bottom: 16px; font-size: 14px; line-height: 20px;  }
+    a                                                                           { font-size: 14px; line-height: 20px; }
+    /* Common Css Start */
+    body                                                                        { font-size: 14px; line-height: 22px;  }
+
+.wp-block-columns .wp-block-column > .heading ,#content .entry-content .wp-block-kadence-rowlayout.alignfull.heading ,h2.widgettitle ,.heading-box   { margin-bottom: 16px; }
+
+/* Common Css End */
+/* Header Css Start */
+
+.primary-navigation .primary-menu-container > ul > .menu-item > a               { font-size: 14px; line-height: 20px;  }
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle                      { width:30px; height: auto;  }
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-plus:after,.primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-minus:after    {  font-size: 16px; line-height: 22px; }
+.primary-navigation > div > .menu-wrapper > li > .sub-menu li a                 { padding:6px; font-size: 13px; line-height: 20px; }
+/* Header Css End */
+/* Banner Section Css Start */
+.banner-section h1                                                              { margin-bottom:16px; }
+/* Banner Section Css End */
+/* About Us Section Css Start */
+.wp-block-columns .wp-block-column.about-us-desc > p                            { padding: 0; margin-bottom: 14px; }
+.wp-block-columns .wp-block-column.about-us-desc                                { padding-right: 0px; }
+.wp-block-columns .wp-block-column.about-us-desc  .common-btn                   { margin-top:6px; }
+/* ABout Us Section Css End */
+/* Project Section Css Start */
+.successful-project .wp-block-columns .wp-block-column.about-us-desc        { padding-left: 15px; padding-right: 0;  } 
+.wp-block-column.project-img-box                                            { margin:0 -7.5px; }
+.wp-block-column.project-img-box figure                                     { padding:0 7.5px; width: 50%; }
+.wp-block-column.project-img-box figure.small-img                           { margin:15px 0; }
+.wp-block-column.project-img-box figure.small-img:last-child  img           { margin-top: 15px;  }
+.wp-block-column.project-img-box figure.small-img:first-child  img          { margin-bottom: 15px;   }
+/* Project Section Css End */
+/* Testimonial Section Css Start */
+.slick-dots                                                                 { margin-top:10px; }
+/* Testimonial Section Css End */
+/* Faq's section start */
+.accordion-body                                                             {  margin-top:12px;  }
+/* faq's section end */
+#eapps-google-maps-1.eapps-google-maps                                      { width:100%; height:300px !important; }
+/* Footer Section Css Start */
+.contact-us-page.feathers.blue-feathers:before                              { top:5%; bottom:auto; transform:rotate(5deg); }
+.feather-after.feathers:after                                             { content: ""; position: absolute;  bottom: -60px; right: -28px; width: 109px; height: 230px; background: url('http://webprojects.cloud/wordpress/three-feathers-realty/wp-content/uploads/2021/02/yellow-feather.png') no-repeat left top/82% auto; }
+.current-opening.feather-after.feathers:after                               { bottom:-20px; }
+.footer-navigation-wrapper li .svg-icon                                     { width:22px; height:22px; }
+.contact-info-section                                                       { margin:-160px 0 0;  }
+.contact-info-section .contact-form , .contact-info-section .contact-info   { padding-left:20px; padding-right:20px;  }
+.contact-info.feathers::before                                              { background-size: 50% auto;  height: 177px; }
+.contact-info li .icon-desc > *                                             { font-size: 14px; line-height: 20px;  }
+.contact-info li .icon-desc                                                 { margin-left: 16px; }
+.contact-info li                                                            { margin-bottom: 12px; }
+.contact-info li .icon i                                                    { font-size:18px; line-height:22px; }
+.form-group                                                                 { margin-bottom: 12px;}
+.form-group .wpcf7-form-control                                             { padding:8px 12px; font-size: 14px; line-height: 22px; height:40px;   }
+.form-group .wpcf7-form-control.wpcf7-textarea                              { height: 70px;  }
+.follow-us                                                                  { margin-top:40px; }
+.follow-us   h3                                                             { margin-bottom: 16px; }
+.follow-us .footer-navigation-wrapper li                                    { margin: 0 6px; }
+.wpcf7-not-valid-tip,.wpcf7-response-output                                 { font-size: 12px; line-height: 15px;  }
+.site-footer > .site-info .powered-by                                       { padding:18px 35px ; }
+.site-footer > .footer-menu-bar                                             { margin:25px 0; }
+.footer-menu-bar .menu li                                                   { margin:0 15px; }
+.footer-menu-bar .menu li.footer-logo a                                     { width:89px; height: 65px;  }
+.contact-info-section.contact-page-footer .contact-information li           { margin:0 12px; }
+.contact-info-section.contact-page-footer .contact-information li .icon-desc { margin:10px 0 0; }
+/* Footer Section Css End */
+/* About Page  Start */
+/* info */
+.about-page .wp-block-column.about-img-box .about-2,.about-page .wp-block-column.about-img-box .about-1 { max-width: 70%; }
+/* about-team */
+.about-team                                                                 { padding:0 15px; }
+.about-team .team                                                           { padding:20px 12px; }
+.about-team .team .img-item                                                 { width:80px; height:80px; }
+/* About Page End */
+/* Career Page Start */
+.btn-box                                                                    { margin-top:25px; }
+.job-box                                                                    { margin:12px 0; }
+.feathers.three-feathers::before                                            { height: 130px; width: 131px; background-size: 100% auto; }
+.job-post-box                                                               { padding:23px; }
+.current-opening-jobs li                                                    { margin:12px 0;  }
+.current-opening-jobs li p                                                  { margin-bottom: 12px; }
+.career-inner-desc                                                          { margin-top:28px; }
+/* Career Page End */
+/* career Inner */
+.contact-form.detail-form                                                   { padding:20px; }
+.career-job-details h3                                                      { margin-top:28px; margin-bottom:16px; }
+.other-jobs > h3                                                            { margin-bottom: 28px; }
+/* Happening TFR Start */
+.news-slider-section.common-space                                           { padding-top:40px; }
+.news-slider-section .news-tfr-slider .news-items .tfr-box                  { min-height:220px;}
+.wp-block-column.tfr-img-box                                                { justify-content: center; }
+.wp-block-column.tfr-img-box .tfr-2, .wp-block-column.tfr-img-box .tfr-1    { max-width: 48%; }
+.news-slider-section.feathers.yellow-feathers::before                       { background-size: 80% auto; width: 130px; right: -4%;  }
+/* Happening TFR End */
+/* Flock Homes Page Start */
+.trinity-info-section.feathers.blue-feathers:before                         { bottom: -12%; height: 200px; background-size: 58% auto; }
+.trinity-location.feathers.yellow-feathers:before                           { height: 183px; width: 117px;   }
+/* Flock Homes Page End  */
+}
+@media(min-width:992px) and (max-width:1199px)/* laptop */
+{
+    h1                                                                          { font-size: 34px; line-height: 52px;  }
+    h2	,h2.faq-title a								                                        { font-size: 28px; line-height: 40px;  }
+    h3									                                        { margin-bottom: 16px; font-size: 22px; line-height: 36px;  }
+    h4	,.accordion-button								                        { font-size: 16px; line-height: 22px; }
+       /* Common Css Start */
+.common-space                                                                   { padding:80px 0; }
+.common-space-small                                                             { padding:50px 0;}
+.bottom-footer-padding                                                          { padding-bottom: 240px; }
+.bottom-footer-padding-small                                                    { padding-bottom:180px; }
+.wp-block-button.common-btn a.wp-block-button__link,.theme-btn, .primary-navigation .primary-menu-container > ul > .menu-item.action-btn a ,.wpcf7-submit.theme-btn { padding:8px 24px; font-size: 14px; line-height: 22px;  }
+.site-main                                                                      {  margin-top:97px; }
+.slick-arrow.slick-prev,.slick-arrow.slick-next                                 { right:130px; top:100%; transform:translate(0 ,-50%); height: 50px; width: 50px; } 
+.slick-arrow.slick-next                                                         { right:50px;  }
+.slick-arrow.slick-prev:after,.slick-arrow.slick-next:after                     { font-size: 24px; line-height: 32px;   }
+.wp-block-columns .wp-block-column > .heading ,#content .entry-content .wp-block-kadence-rowlayout.alignfull.heading ,h2.widgettitle    { margin-bottom: 16px; }
+.feathers:before                                                                { height: 355px; width: 181px; top:20px; left:-30px; background-size: 70% auto; }
+.feathers.yellow-feathers:before                                                {  left:auto; right: -112px; width: 202px; height: 233px; background-size: 55% auto;}
+.feathers.blue-feathers:before                                                  {   top:auto; bottom:0; left:-35px;  width: 180px; height: 379px;  }
+/* Common Css End */
+/* Header Css Start */
+.site-header                                                                    { padding:8px 30px;  }
+.site-header.header-style                                                       {  padding:6px 30px;  }
+.site-header.header-style .site-branding                                        { width: 83px; }
+.primary-navigation .primary-menu-container > ul > .menu-item                   { margin:0 16px;  }
+.primary-navigation .primary-menu-container > ul > .menu-item > a               { font-size: 14px; line-height: 20px;  }
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle                      { width:30px; height: auto;  }
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-plus:after,.primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-minus:after    {  font-size: 16px; line-height: 22px; }
+.primary-navigation > div > .menu-wrapper > li > .sub-menu li a                 { padding:6px; font-size: 13px; line-height: 20px; }
+/* Header Css End */
+/* Banner Section Css Start */
+.banner-section                                                                 { padding:50px;  min-height:calc(100vh - 140px); }
+.banner-desc                                                                    { padding:30px;  }
+/* Banner Section Css End */
+/* About Us Section Css Start */
+.wp-block-column.about-img-box .about-2                                         { right:6%; top:10%;  }
+/* ABout Us Section Css End */
+.team-section.feathers.feathers.yellow-feathers:before                      { right: -11%;  }
+.wp-block-column.about-img-box .about-2, .wp-block-column.about-img-box .about-1 { max-width:55%; }
+.projects-section.successful-project.common-space                               { padding-bottom: 80px; }
+/* Project Section Css Start */
+.successful-project .wp-block-columns .wp-block-column.about-us-desc        { padding-left: 15px; padding-right: 0;  } 
+.wp-block-column.project-img-box figure                                     { padding:0 7.5px; width: 50%; }
+.wp-block-column.project-img-box figure.small-img                           { margin:15px 0; }
+.wp-block-column.project-img-box figure.small-img:last-child  img           { margin-top: 15px;  }
+.wp-block-column.project-img-box figure.small-img:first-child  img          { margin-bottom: 15px;   }
+.wp-block-column.project-img-box figure.center-logo                         { padding:10px; width: 120px; height: 120px; }
+/* Project Section Css End */
+/* Testimonial Section Css Start */
+.testimonial-slider                                                         { margin-top:40px;   }
+.testimonial-slider .items .img-box                                         { margin-bottom: 24px; width: 100px; height: 100px;  }
+.slick-dots                                                                 { margin-top:10px; }
+/* Testimonial Section Css End */
+/* Faq's section start */
+.faqs-section.feathers.yellow-feathers:before                               { max-width: 80%; transform: rotate(-12deg); right: -12%; top: -15px; background-size: 50% auto; }
+.accordion-item                                                             { padding:20px 0;  }
+/* faq's section end */
+/* Career  */
+.career-contact-form.common-space                                           { padding-top:30px; }
+.career-contact-form.common-space.bottom-footer-padding                     { padding-bottom:190px; }
+.current-opening p.sub-title                                                { max-width: 88%; }
+/* About Page */
+.about-page.about-us-section.common-space                                   { padding-bottom: 80px; }
+.contact-us-page.feathers.blue-feathers:before                              { top:5%; bottom:auto; transform:rotate(5deg); background-size:60% auto; }
+.feather-after.feathers:after                                               { bottom: -20px; right: -10px; width: 90px; height: 180px; background-size:90% auto; }
+.current-opening.feather-after.feathers:after                               { bottom:20px; }
+/* Flock Homes Page Start */
+.flock-page-info.feathers.blue-feathers::before                             { background-size: 73% auto; bottom:-3%; left:-13px; width: 131px; height: 205px;  }
+.pink-right.feathers::before                                                {  height: 165px; width: 110px; right: -12px;  background-size: 76% auto; bottom: 0; }
+.left-yellow-feathers.feathers.rotate-feathers.yellow-feathers::before      { top:8%; width: 180px; height: 215px; left: -3%; background-size: 57% auto;  }
+.site-plan-section.feathers.blue-feathers::before                           { top:0%; height: 217px; width: 120px; right: -12px;  background-size: 88% auto; }
+.specification-section.feathers::before                                     { height: 184px; width: 109px; left:-1%; background-size: 85% auto; }
+.project-status-section.feathers.yellow-feathers::before                      { height: 170px; width: 102px; right: -2.1%; background-size: 79% auto;  }
+.spec-list.feature-lists                                                     { max-width: 100% !important;  }      
+/* menu */
+.inner-navigation                                                           { top:73.11px;  }
+.inner-navigation ul.menu                                                   { padding:15px 0;  }
+.inner-navigation ul.menu li                                                { margin:0 8px; }
+#content .entry-content .features-section .wp-block-kadence-rowlayout.alignfull.heading,#content .entry-content .wp-block-kadence-rowlayout.alignfull.heading.has-subtitle,#content .entry-content .location-section .wp-block-kadence-rowlayout.alignfull.heading ,#content .entry-content .farm-house-section .wp-block-kadence-rowlayout.alignfull.heading,#content .entry-content .gallery-slider-section .wp-block-kadence-rowlayout.alignfull.heading { margin-bottom: 30px; }
+.features-section .wp-block-column.feature-box                              { margin:0 40px; }
+.farm-house-section   .wp-block-column.active-passive-box                   { padding:24px 10px;  margin:0 10px;  }
+.farm-house-section   .wp-block-column.active-passive-box h3                { padding:0 15px; margin-bottom:26px; }
+/* gallery */
+.gallery-slider-section .gallery-slider .gallery-items .image-box           { padding-top:70%; margin:0 15px;  }
+/* location */
+.wp-block-columns .wp-block-column.location-img-box                         { margin-right:25px; }
+/* site-plan */
+.site-plan-img-box                                                          { padding: 20px 0;  }
+/* specification */
+/*  .spec-list                                                                 { padding:0;  } */
+ .spec-list li                                                              { margin-bottom:8px; }
+ .wp-block-columns .wp-block-column.specification-table-box                 { padding-right:30px; }
+  .wp-block-column.specification-table-box .specification-table table thead th { font-size:13px; line-height:19px; }
+  .wp-block-column.specification-table-box .specification-table table  th ,.wp-block-column.specification-table-box .specification-table table  td { padding:12px 8px;  } 
+  /* Flock Homes Page End */
+  .morden-amenities-section.common-space                                      { padding-bottom:50px; }
+/* Trinity Page Start */
+.trinity-section .img-heading img                                           { margin-right:7px; }
+.trinity-info-section.about-page.about-us-section.common-space              { padding-bottom:160px; }
+.trinity-info-section.about-page .wp-block-columns .wp-block-column.about-us-desc { padding-right:15px; }
+.testimonial-single.bottom-footer-padding                                   { padding-bottom:170px; }
+/* Trinity Page End */
+/* Active+Passive Page Start */
+.right-bottom-feathers.feathers:before                                       { height: 218px; width: 110px; background-size: 95% auto; bottom:10%; right:-1%; left:auto; }
+.left-blue-feather.feathers.blue-feathers:before                            { height: 218px; width: 110px; top:0%; transform: rotate(7deg); left: -7px;  }
+.left-yellow-feathers.feathers.rotate-feathers.yellow-feathers::before      { top: 8%; width: 180px; height: 215px; left: -9%; background-size: 57% auto; }
+.organic-desc-box .wp-block-group .wp-block-group__inner-container p        { margin:0 0 20px }
+.organic-desc-box .wp-block-group .wp-block-group__inner-container h3       { margin:0 0 16px; }
+.wp-block-columns .wp-block-column.organic-desc-box                         { padding-right:18px; }
+.wp-block-columns .wp-block-column.organic-desc-box.padding-right           { padding-right:0; padding-left:18px;  }
+.organic-food-img-box .wp-block-group.food-img-content .food-img-1          { margin:0 0 20px !important; }
+.organic-food-img-box .wp-block-group.food-img-content .food-img-1 ,.organic-food-img-box .wp-block-group.food-img-content .food-img-2 { max-width:65% !important; }
+.organic-food-img-box .wp-block-group.food-img-content .food-img-2          {  top:42%; left:31%; } 
+.wp-block-columns.amenities-box                                             { margin:0 -12px; }
+.wp-block-columns .wp-block-column.features-items                           { margin:0 0px 30px; padding:0 12px; }
+.wp-block-columns .wp-block-column.features-items    h4                     { margin:16px 15px 0; }
+p.sub-title                                                                 { max-width:63%; }
+/* Active+passive Page End */
+/* 404 Page  */
+.error-404  h1                                                              { font-size:130px; line-height:140px; }
+.error404 main p                                                            { margin-bottom:14px; }
+
+}
+@media(min-width:768px) and (max-width:991px)/* tablet */
+{
+    h1                                                                          	  { font-size: 30px; line-height: 42px;  }
+    h2	,h2.faq-title a								                                        { font-size: 26px; line-height: 38px;  }
+    h3									                                        { margin-bottom: 16px; font-size: 18px; line-height: 30px;  }
+    h4	,.accordion-button								                        { font-size: 15px; line-height: 22px; }
+   /* Common Css Start */
+    .wp-block-button.common-btn a.wp-block-button__link,.theme-btn, .primary-navigation .primary-menu-container > ul > .menu-item.action-btn a ,.wpcf7-submit.theme-btn  { padding:6px 18px; font-size: 13px; line-height: 20px;  }
+    .common-space                                                                   { padding:50px 0; }
+    .common-space-small                                                             { padding:40px 0;}
+.bottom-footer-padding                                                          { padding-bottom: 210px; }
+.bottom-footer-padding-small                                                    { padding-bottom:170px; }
+    .site-main                                                                      {  margin-top:75px; }
+.slick-arrow.slick-prev,.slick-arrow.slick-next                                 { right:120px; height: 40px; width: 40px; } 
+.slick-arrow.slick-next                                                         { right:40px;  }
+.slick-arrow.slick-prev:after,.slick-arrow.slick-next:after                     { font-size: 20px; line-height: 32px;   }
+.feathers:before                                                                {  top:14px; left:-35px;background-size: 82% auto; height: 166px; width: 100px;}
+.feathers.yellow-feathers:before                                                {  right: -8%; height: 249px; background-size: 70% auto;  }
+.feathers.blue-feathers:before                                                  {   bottom:0; left:-35px; background-size: 80% auto; width: 119px; height: 183px; }
+.featured-img-banner                                                            { height:200px;}
+.banner-info-box .banner-image                                                  { max-width:57%; }
+p.sub-title                                                                     { max-width:76%; }
+/* Header Css Start */
+.site-branding                                                                  { width: 93px; transition: all 0.5s ease;}
+.site-header                                                                    { padding:6px 25px;  }
+.site-header.header-style                                                       { padding:4px 25px;  }
+.site-header.header-style .site-branding                                        { width: 71px; }
+.primary-navigation .primary-menu-container > ul > .menu-item                   { margin:0 10px;  }
+.primary-navigation .primary-menu-container > ul > .menu-item > a               { font-size: 13px; line-height: 20px;  }
+/* Header Css End */
+/* Banner Section Css Start */
+.banner-section                                                                 { padding:40px;  min-height:calc(100vh - 100px); }
+.banner-desc                                                                    { padding:25px;  }
+/* Banner Section Css Eng */
+/* About Us Section Css Start */
+.wp-block-column.about-img-box .about-2 ,.wp-block-column.about-img-box .about-1  { max-width: 60%; }
+.wp-block-column.about-img-box .about-2                                         { right:6%; top:10%;  }
+/* ABout Us Section Css End */
+.projects-section.successful-project.common-space                               { padding-bottom: 50px; }
+.wp-block-column.project-img-box figure.center-logo                             { padding:10px; width: 100px; height: 100px; }
+.wp-block-column.project-img-box figure.small-img img                           { width: 70%; }
+/* Project Section Css End */
+/* Testimonial Section Css Start */
+.testimonial-slider                                                             { margin-top:30px;   }
+.testimonial-slider .items .img-box                                             { margin-bottom: 16px; width: 80px; height: 80px;  }
+/* Testimonial Section Css End */
+/* Faq's section start */
+.faqs-section.feathers.yellow-feathers:before                                   { transform: rotate(-12deg); right: -16%; top: -15px; background-size: 40% auto; }
+.accordion-item                                                                 { padding:15px 0;  }
+/* faq's section end */
+/* Career  */
+.career-contact-form.common-space                                           { padding-top:30px; }
+.career-contact-form.common-space.bottom-footer-padding                     { padding-bottom:170px; }
+/* Footer Section Css Start */
+.morden-amenities-section.common-space                                      { padding-bottom:30px; }
+.contact-info-section .contact-form , .contact-info-section .contact-info   { padding-left:16px; padding-right:16px;  }
+.contact-info.feathers::before                                              { background-size: 62% auto;  height: 121px; }
+.contact-info li .icon-desc > *                                             { font-size: 12px; line-height: 20px;  }
+.contact-info li .icon-desc                                                 { margin-left: 8px; }
+.contact-info li                                                            { margin-bottom: 12px; }
+.form-group                                                                 { margin-bottom: 12px;}
+.form-group .wpcf7-form-control                                             { padding:5px 10px;  height:36px;   }
+.form-group .wpcf7-form-control.wpcf7-textarea                              { height: 70px;  }
+.follow-us                                                                  { margin-top:25px; }
+.follow-us   h3                                                             { margin-bottom: 16px; }
+.follow-us .footer-navigation-wrapper li                                    { margin: 0 6px; }
+.wpcf7-not-valid-tip,.wpcf7-response-output                                 { font-size: 12px; line-height: 15px;  }
+.site-footer > .site-info .powered-by                                       { padding:18px 35px ; text-align: center; }
+.site-footer > .footer-menu-bar                                             { margin:25px 0; }
+.footer-menu-bar .menu li                                                   { margin:0 8px; }
+.footer-menu-bar .menu li.footer-logo a                                     { width:89px; height: 65px;  }
+.current-opening p.sub-title                                                { max-width: 100%; }
+/* Footer Section Css End */
+/* About Page Start */
+.team-section.feathers.feathers.yellow-feathers:before                      {  bottom: -11%; height: 222px; right: -15%; width: 162px;  }
+.about-page.about-us-section.common-space                                   { padding-bottom: 60px; }
+.team-section .wp-block-columns .wp-block-column                            { text-align: center; flex-basis: 100% !important; }
+/* About Page End */
+/* Career Page Start */
+.job-post-box                                                               { padding:15px; }
+/* Career Page End */
+/* Happening TFR Start */
+.arrows-small .slick-arrow.slick-prev,.arrows-small .slick-arrow.slick-next { left:-15px; height: 30px; width: 30px; } 
+.arrows-small .slick-arrow.slick-next                                       { left:auto;  right:-15px; }
+.wp-block-column.tfr-img-box .tfr-2                                         { right:-4%; }
+/* Happening TFR End */
+/* Flock Homes Page Start */
+.flock-page-info.feathers.blue-feathers::before                             { background-size: 73% auto; bottom:-3%; left:-13px; width: 131px; height: 205px;  }
+.pink-right.feathers::before                                        {  height: 165px; width: 110px; right: -12px;  background-size: 76% auto;  }
+.left-yellow-feathers.feathers.rotate-feathers.yellow-feathers::before   { top:8%; width: 106px; height: 210px; left: -3%; background-size: 84% auto;  }
+.site-plan-section.feathers.blue-feathers::before                           { top:0%; height: 217px; width: 120px; right: -12px;  background-size: 88% auto; }
+.specification-section.feathers::before                                     { height: 184px; width: 109px; left:-2%; background-size: 85% auto; }
+.project-status-section.feathers.yellow-feathers::before                      { height: 170px; width: 102px; right: -3%; background-size: 79% auto;  }
+/* menu */
+.inner-navigation                                                           { top:60.86px;  }
+.inner-navigation ul.menu                                                   { padding:15px 0;  }
+.inner-navigation ul.menu li                                                { margin:0 6px; }
+.inner-navigation ul.menu li a                                              { font-size:12px; line-height:15px;}
+#content .entry-content .features-section .wp-block-kadence-rowlayout.alignfull.heading,#content .entry-content .wp-block-kadence-rowlayout.alignfull.heading.has-subtitle,#content .entry-content .location-section .wp-block-kadence-rowlayout.alignfull.heading ,#content .entry-content .farm-house-section .wp-block-kadence-rowlayout.alignfull.heading,#content .entry-content .gallery-slider-section .wp-block-kadence-rowlayout.alignfull.heading { margin-bottom: 20px; }
+.features-section .wp-block-column.feature-box                              { padding:0px 16px; margin:0; flex-basis:33.33% !important; }
+.farm-house-section   .wp-block-column.active-passive-box                   { padding:16px;  margin:0 7px; flex-basis:31% !important;   }
+.farm-house-section   .wp-block-column.active-passive-box h3                { padding:0; margin-bottom:14px; }
+/* gallery */
+.gallery-slider-section .gallery-slider .gallery-items .image-box           { padding-top:70%; margin:0 15px;  }
+/* location */
+.wp-block-columns .wp-block-column.location-img-box                         { margin-right:25px; }
+/* site-plan */
+.site-plan-img-box                                                          { padding: 20px 0;  }
+/* specification */
+/*  .spec-list                                                                 { padding:0;  } */
+ .spec-list li                                                              { margin-bottom:8px; }
+ .wp-block-columns .wp-block-column.specification-table-box                 { padding-right:20px; }
+ .wp-block-column.specification-table-box .specification-table table        { min-width:400px; } 
+ .wp-block-column.specification-table-box .specification-table table thead th { font-size:13px; line-height:19px; }
+  .wp-block-column.specification-table-box .specification-table table  th ,.wp-block-column.specification-table-box .specification-table table  td { padding:12px 8px;  } 
+  .spec-list.feature-lists                                                     { max-width: 100% !important;  }
+.spec-list.feature-lists li                                                 { width: calc(50% - 20px); margin-left: 10px; margin-right: 10px; }
+  /* Flock Homes Page End */
+/* Trinity Page Start */
+.trinity-section .img-heading img                                           { margin-right:7px; }
+.trinity-info-section.about-page.about-us-section.common-space              { padding-bottom:100px; }
+.trinity-info-section.about-page .wp-block-columns .wp-block-column.about-us-desc { padding-right:15px; }
+.testimonial-single.bottom-footer-padding                                   { padding-bottom:160px; }
+/* Trinity Page End */
+/* Active+Passive Page Start */
+.wp-block-columns.amenities-box                                             { margin:0 -15px; }
+.wp-block-columns .wp-block-column.features-items                           { margin:0 0 20px; padding:0 15px; flex-basis:50% !important; }
+.wp-block-columns .wp-block-column.features-items    h4                     { margin:10px 0 0;  }
+.organic-desc-box .wp-block-group .wp-block-group__inner-container p        { margin:0 0 20px }
+.organic-desc-box .wp-block-group .wp-block-group__inner-container h3       { margin:0 0 16px; }
+.wp-block-columns .wp-block-column.organic-desc-box                         { padding-right:18px; margin-bottom:0; }
+.wp-block-columns .wp-block-column.organic-desc-box.padding-right           { padding-right:0; padding-left:18px;  }
+.organic-food-img-box .wp-block-group.food-img-content .food-img-1          { margin:0 0 20px !important; }
+.organic-food-img-box .wp-block-group.food-img-content .food-img-1 ,.organic-food-img-box .wp-block-group.food-img-content .food-img-2 { max-width:62% !important; }
+.organic-food-img-box .wp-block-group.food-img-content .food-img-2          {  top:42%; left:31%; } 
+.right-bottom-feathers.feathers:before                                       { height: 218px; width: 110px; background-size: 95% auto; bottom:-2%; right:-1%; left:auto; }
+.left-blue-feather.feathers.blue-feathers:before                            { height: 218px; width: 110px; top:0%; transform: rotate(7deg); left: -7px;  }
+.left-yellow-feathers.feathers.rotate-feathers.yellow-feathers::before      { top: 0%; width: 180px; height: 215px; left: -12%; background-size: 57% auto; }
+/* Active+passive Page End */
+/* 404 Page  */
+.error-404  h1                                                              { font-size:130px; line-height:140px; }
+.error404 main p                                                            { margin-bottom:14px; }
+}
+@media(max-width:767px)/* mobile */
+{
+    h1                                                                          { font-size: 25px; line-height: 35px;   }
+    h2	,h2.faq-title a								                                        { font-size: 22px; line-height: 30px;  }
+    h3									                                        { margin-bottom: 10px; font-size: 19px; line-height: 22px;  }
+    h4	,.accordion-button								                        { font-size: 15px; line-height: 22px; }
+    p 									                                        { margin-bottom: 10px; font-size: 14px; line-height: 20px;  }
+    a                                                                           { font-size: 14px; line-height: 20px; }
+    /* Common Css Start */
+    body                                                                        { font-size: 14px; line-height: 22px;  }
+    /* Common Css Start */
+
+   .wp-block-button.common-btn a.wp-block-button__link,.theme-btn, .primary-navigation .primary-menu-container > ul > .menu-item.action-btn a ,.wpcf7-submit.theme-btn  { padding:6px 18px; font-size: 13px; line-height: 20px;  }
+    .wp-block-columns .wp-block-column:not(:last-child)                         { margin:0; }
+    .common-space                                                                   { padding:30px 0; }
+    .common-space-small                                                             { padding:30px 0;}
+.bottom-footer-padding                                                              { padding-bottom: 145px; }
+.bottom-footer-padding-small                                                    { padding-bottom:115px; }
+    .site-main                                                                      {  margin-top:90.18px; }
+.slick-arrow.slick-prev,.slick-arrow.slick-next                                 { right:100px; height: 40px; width: 40px; } 
+.slick-arrow.slick-next                                                         { right:40px;  }
+.slick-arrow.slick-prev:after,.slick-arrow.slick-next:after                     { font-size: 20px; line-height: 32px;   }
+.feathers:before                                                                { display: none !important; top:14px; left:-35px; background-size: 50% auto; height: 200px; }
+.feathers.yellow-feathers:before                                                {  right:-46%; top:48%; height: 300px;  }
+.feathers.blue-feathers:before                                                  {   bottom:0; left: -30px; height: 188px;  }
+.wp-block-columns .wp-block-column > .heading, #content .entry-content .wp-block-kadence-rowlayout.alignfull.heading ,h2.widgettitle ,.heading-box { margin-bottom: 10px; }
+.featured-img-banner                                                            { min-height:130px; height:auto; }
+.featured-img-banner *                                                          { text-align:center; }
+.title-box                                                                      { margin:16px 0; }
+.banner-image  img                                                              { margin:24px 0 0; }
+h2.img-heading                                                                  { font-size:16px; line-height:24px; }
+/* Header Css Start */
+.site-branding ,.page-id-38 .site-header.header-style .site-branding ,.page-id-40  .site-header.header-style .site-branding { width: 89px; transition: all 0.5s ease;}
+.site-header  ,.page-id-38 .site-header.header-style ,  .page-id-40 .site-header.header-style { padding:12px 15px;  }
+.site-header.has-logo:not(.has-title-and-tagline).has-menu .site-logo img       { max-height: none; }
+.site-header.header-style                                                       { padding:8px 15px;  }
+.site-header.header-style .site-branding                                        { width: 81px; }
+.page-id-38 .site-header ,  .page-id-40 .site-header                            { position:absolute; }
+.primary-navigation .primary-menu-container > ul > .menu-item                   { margin:10px 0;   }
+.primary-navigation .primary-menu-container > ul > .menu-item > a               { font-size: 18px; line-height: 24px;  }
+.menu-button-container #primary-mobile-menu                                     { padding:0; text-align:center;   }
+.site-header.has-logo:not(.has-title-and-tagline).has-menu .site-logo           { padding:0; position: unset; }
+.menu-button-container                                                          { position: relative; }
+.primary-navigation                                                             { margin-left: auto; margin-right: 0; position: unset; }
+.menu-button-container #primary-mobile-menu,.primary-navigation > div > .menu-wrapper  ,.menu-button-container      { padding:0;}
+.primary-navigation > div > .menu-wrapper                                       { padding-top:10px; }
+.primary-navigation-open .menu-button-container                                 { padding:15px; height:89px; align-items:center; }
+.menu-button-container .button.button .dropdown-icon.close                      { height:35px; }
+.menu-button-container .button.button .dropdown-icon.open .svg-icon ,.menu-button-container .button.button .dropdown-icon.close .svg-icon  { margin-left:0; height:35px; width:35px; }
+.banner-subtitle                                                                { padding:0 15px; }
+.primary-navigation > div > .menu-wrapper > li > .sub-menu li a                 { font-size: 16px; line-height:22px; }
+.primary-navigation .primary-menu-container > ul > .menu-item.action-btn        { margin-top:16px;}
+.primary-navigation .primary-menu-container > ul > .menu-item.action-btn a      {  padding:9px 24px; font-size: 18px; line-height: 24px; }
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle                      { height:15px; }
+.primary-navigation .primary-menu-container > ul > .menu-item.menu-item-has-children > a { padding:0; }
+.primary-navigation > div > .menu-wrapper > li > .sub-menu                      { top:8px; }
+/* Header Css End */
+/* Banner Section Css Start */
+.banner-section                                                                 { padding:30px 15px;  min-height:330px; }
+.banner-desc                                                                    { padding:10px 15px; text-align: center; }
+.banner-section h1                                                              { margin-bottom:10px; }
+.banner-section .row                                                            { margin:0 !important; width:100% !important; }
+.banner-section .row p                                                          { display: none; }
+/* Banner Section Css Eng */
+/* About Us Section Css Start */
+.home-about .wp-block-columns .wp-block-column.about-us-desc                    {  padding-top:40px; }
+.home .about-us-section .wp-block-column.about-img-box                                { margin:25px 20px 0; }
+.about-us-section .wp-block-column.about-img-box                                { margin:0 20px; }
+.about-page .wp-block-columns .wp-block-column.about-us-desc                    { padding-left:0; }
+.wp-block-column.about-img-box .about-2 ,.wp-block-column.about-img-box .about-1  { max-width: 52%; }
+.wp-block-column.about-img-box .about-2                                         { right:6%; top:10%;  }
+.wp-block-columns .wp-block-column.about-us-desc                                { padding:15px 0 0;  }
+/* ABout Us Section Css End */
+.wp-block-columns .wp-block-column.project-img-box                                                { margin:0 -7.5px; }
+.wp-block-columns .wp-block-column.project-img-box figure                                         { padding:7.5px; width: 50%; }
+.wp-block-columns .wp-block-column.project-img-box figure.small-img                               { margin:0; }
+.wp-block-columns .wp-block-column.project-img-box figure.small-img:last-child  img               { margin-top: 0;  }
+.wp-block-columns .wp-block-column.project-img-box figure.small-img:first-child  img              { margin-bottom:0;   }
+.wp-block-columns .wp-block-column.project-img-box figure.big-img  img                            { margin:0; min-height: 100%; max-height: 100%; }
+.projects-section.successful-project.common-space                               { padding-bottom:25px; }
+.organic-foodfarm-section.common-space                                          { padding: 20px 0; }
+.wp-block-columns .wp-block-column.project-img-box figure.center-logo                             { padding:10px; width: 90px; height: 90px; }
+.wp-block-columns .wp-block-column.project-img-box figure.small-img img ,.wp-block-column.project-img-box figure.big-img  img      { width: 100%; }
+.successful-project .wp-block-columns .wp-block-column.about-us-desc            { padding:0; margin-top:15px; }
+/* Project Section Css End */
+/* Testimonial Section Css Start */
+.testimonial-slider                                                             { margin-top:25px;   }
+.testimonial-slider .items .img-box                                             { margin-bottom: 16px; width: 80px; height: 80px;  }
+/* Testimonial Section Css End */
+/* Faq's section start */
+.faqs-section.feathers.yellow-feathers:before                                   { transform: rotate(-12deg); right: -50%; top: -15px; background-size: 30% auto; height: 154px; width: 227px; }
+.accordion-item                                                                 { padding:15px 0;  }
+.accordion-body                                                                 { margin-top:10px; }
+.accordion-body p                                                               { font-size:13px; }
+/* faq's section end */
+/* Career  */
+.career-contact-form.common-space                                           { padding-top:30px; }
+.career-contact-form.common-space.bottom-footer-padding                     { padding-bottom:135px; }
+.current-opening p.sub-title                                                { max-width: 100%; }
+/* Footer Section Css Start */
+#eapps-google-maps-1.eapps-google-maps                                      { height:240px !important; }
+    .contact-info-section                                                       { margin:-120px 0 0;  }
+.contact-info-section .contact-form , .contact-info-section .contact-info   { padding-left:16px; padding-right:16px;  }
+.contact-info.feathers::before                                              { background-size: 35% auto;  height: 121px; }
+.contact-info li .icon-desc > *                                             { font-size: 14px; line-height: 20px;  }
+.contact-info li .icon-desc                                                 { margin-left: 8px; }
+.contact-info li                                                            { margin-bottom: 12px; }
+.form-group                                                                 { margin-bottom: 12px;}
+.form-group .wpcf7-form-control                                             { padding:5px 10px;  height:40px; font-size:13px; line-height: 20px;  }
+.form-group .wpcf7-form-control.wpcf7-textarea                              { height: 90px;  }
+.follow-us                                                                  { margin-top:25px; }
+.follow-us   h3                                                             { margin-bottom: 16px; }
+.follow-us .footer-navigation-wrapper li                                    { margin: 0 6px; }
+.wpcf7-not-valid-tip,.wpcf7-response-output                                 { font-size: 12px; line-height: 15px;  }
+.site-footer > .site-info .powered-by                                       { padding:18px 10px ; text-align: center; }
+.site-footer > .footer-menu-bar                                             { margin:15px 0; }
+.footer-menu-bar .menu                                                      { padding:0 15px; display: block; text-align: center; }
+.footer-menu-bar .menu li                                                   { margin:4px 0; }
+.footer-menu-bar .menu li.footer-logo                                       { margin:0 0 10px; }
+.footer-menu-bar .menu li.footer-logo a                                     { width:92px; height: 70px;  }
+.contact-info-section.contact-page-footer .contact-information              { display:block; }
+.contact-info-section.contact-page-footer .contact-information li           { margin:12px 0; width:100%; }
+.contact-info-section.contact-page-footer .contact-information li .icon-desc { margin:8px 0 0; }
+.widget-area .row                                                           { --bs-gutter-x: 0rem;}
+/* Footer Section Css End */
+/* About Page Start */
+.wp-block-columns .wp-block-column.about-us-desc > p                        { margin-bottom:10px; }
+.wp-block-columns .wp-block-column.about-us-desc > p:last-child             { margin-bottom:0; }
+.out-team-black-bg                                                          { height:60px; }
+.about-page .wp-block-column.about-img-box .about-2, .about-page .wp-block-column.about-img-box .about-1 { max-width:55%; }
+.about-page.feathers::before                                                { background-size: 50% auto; }
+.team-section.feathers.feathers.yellow-feathers:before                      { background-size: 55% auto;  bottom: -6%; height: 211px; right: -20%; width: 139px; }
+.about-page.about-us-section.common-space                                   { padding-bottom: 30px; }
+.team-section .wp-block-columns .wp-block-column                            { text-align: center;  }
+.about-page.about-us-section .wp-block-column.about-img-box                 { margin:0; }
+.about-page.about-us-section .wp-block-column.about-us-desc                 { padding-top: 80px; }
+.about-team                                                                 { padding:0 22px; }
+.about-team .team                                                           { padding:16px 12px; }
+.about-team .team-box                                                       { margin-bottom:15px; }
+.about-team .team-box:last-child                                            { margin-bottom:0; }
+.wp-block-columns.team-section-block                                        { margin-bottom: 25px !important; }
+/* About Page End */
+/* Career Page Start */
+.btn-box                                                                    { margin-top:15px; }
+.job-box                                                                    { margin:12px 0; }
+.feathers.three-feathers::before                                            { height: 130px; width: 131px; background-size: 100% auto; }
+.job-post-box                                                               { padding:16px; }
+.current-opening-jobs                                                       { display: block; }
+.current-opening-jobs li ,.current-opening-jobs li:nth-child(even)          { margin:12px 0; width:100%; }
+.current-opening-jobs li p                                                  { margin-bottom: 12px; }
+.current-opening p.sub-title                                                { max-width: 100%; }
+/* career Inner */
+.contact-form.detail-form                                                   { padding:16px; }
+.career-job-details h3                                                      { margin-top:23px; margin-bottom:10px; }
+.other-jobs > h3                                                            { margin-bottom: 16px; }
+.career-inner-desc                                                          { margin-top:15px; }
+.job-details                                                                { margin-bottom:20px; }
+.career-job-details ul li                                                   { margin-bottom:4px; }
+.other-job-detail li                                                        { margin-bottom:10px; }
+.other-job-detail li:last-child                                             { margin-bottom:0; }
+/* Career Page End */
+/* Happening TFR Start */
+.happenings-section                                                         { display:none; }
+.news-slider-section.common-space                                           { padding-top:25px; }
+.happenings-section.feathers.blue-feathers::before                          { background-size: 50% auto; }
+.news-slider-section.feathers.yellow-feathers::before                       { background-size: 60% auto; }
+.arrows-small .slick-arrow.slick-prev,.arrows-small .slick-arrow.slick-next { left:8px; height: 30px; width: 30px; } 
+.arrows-small .slick-arrow.slick-next                                       { left:auto;  right:8px; }
+.news-slider-section .news-tfr-slider .news-items .tfr-box                  { min-height: 200px; }
+.news-slider-section .news-tfr-slider .news-items                           { margin:0 8px; padding:0 20px; }
+.wp-block-column.tfr-img-box                                                { margin-top:-60px; justify-content: center; }
+.wp-block-column.tfr-img-box .tfr-2, .wp-block-column.tfr-img-box .tfr-1    { max-width: 48%; top:15%; }
+.wp-block-column.tfr-img-box .tfr-2                                         { right:0; }
+.news-slider-section.feathers.yellow-feathers::before                       { background-size: 70% auto; width: 130px; right: -16%;  }
+/* Happening TFR End */
+/* Flock Homes Page Start */
+.morden-amenities-section.common-space                                      { padding-bottom:15px; }
+.flock-page-info.feathers.blue-feathers::before                             {  width: 89px; height: 141px;  }
+.pink-right.feathers::before                                                {  height: 145px; width: 89px;  }
+.left-yellow-feathers.feathers.rotate-feathers.yellow-feathers::before      { top:0; width: 100px; height: 199px; left: -7%; transform: rotateY(180deg) rotate(-12deg);}
+.site-plan-section.feathers.blue-feathers::before                           {  height: 138px; width: 75px;    }
+.specification-section.feathers::before                                     { height: 138px; width: 75px; left:-2%; background-size: 85% auto; }
+.project-status-section.feathers.yellow-feathers::before                      { height: 138px; width: 75px; top:56%; right: -5.5%; background-size: 79% auto; }
+/* menu */
+.inner-navigation                                                           { top:0; }
+.inner-navigation ul.menu                                                   { padding:10px 0;  flex-wrap:wrap;  }
+.inner-navigation ul.menu li                                                { padding:0 9px; margin:3px 0;  text-align:center; position:relative; }
+.inner-navigation ul.menu li:after                                          { content:"|"; position:absolute; right:0; top:50%;  transform:translateY(-50%); color:#333; font-size:12px; line-height:15px; font-weight:bold; }
+.inner-navigation ul.menu li:last-child:after                               { display:none; }
+.inner-navigation ul.menu li a                                              { font-size:12px; line-height:15px; } 
+#content .entry-content .features-section .wp-block-kadence-rowlayout.alignfull.heading,#content .entry-content .wp-block-kadence-rowlayout.alignfull.heading.has-subtitle,#content .entry-content .location-section .wp-block-kadence-rowlayout.alignfull.heading ,#content .entry-content .farm-house-section .wp-block-kadence-rowlayout.alignfull.heading,#content .entry-content .gallery-slider-section .wp-block-kadence-rowlayout.alignfull.heading { margin-bottom: 15px; }
+.features-section .wp-block-column.feature-box                              { padding:0px 26px; margin:0 0 25px; flex-basis:100% !important; }
+.features-section .wp-block-column.feature-box:last-child                   { margin:0 0 0; }
+.features-section .wp-block-column.feature-box .wp-block-image figure       { max-width:25%; margin:0 auto 10px; }
+.wp-block-columns .wp-block-column > h4                                     { margin-top:0; }
+.farm-house-section   .wp-block-column.active-passive-box                   { padding:20px 40px;  margin:0 0 20px; flex-basis:100% !important;   }
+.farm-house-section .wp-block-column.active-passive-box:last-child          { margin:0 0 0;  }
+.farm-house-section   .wp-block-column.active-passive-box h3                { padding:0; margin-bottom:14px; }
+.spec-list.feature-lists                                                     { padding-left:15px; max-width: 100% !important;  }
+.spec-list.feature-lists li                                                 { width: 100%; margin-left: 0px; margin-right: 0px; }
+/* gallery */
+.gallery-slider-section .gallery-slider .gallery-items .image-box           { padding-top:65%; margin:0 33px;  }
+/* location */
+.wp-block-columns .wp-block-column.location-img-box                         { margin-right:0; margin-bottom:15px; }
+.location-section .wp-block-column.location-img-box .loc-img                { padding-bottom: 10px; }
+.location-section .wp-block-column.loc-desc-box p                           { margin-bottom:12px; }
+.location-section .wp-block-column.loc-desc-box .wp-block-buttons           { margin-top:0; }
+.location-section                                                           { text-align:center; }
+/* site-plan */
+.site-plan-img-box                                                          { padding: 20px 0;  }
+/* specification */
+ /* .spec-list                                                                 { padding:0;  } */
+ .spec-list li                                                              { margin-bottom:4px; }
+ .wp-block-columns .wp-block-column.specification-table-box                 { padding-right:0px; margin-bottom:15px; }
+ .wp-block-column.specification-table-box .specification-table table        { min-width:400px; } 
+ .wp-block-column.specification-table-box .specification-table table thead th { font-size:13px; line-height:19px; }
+  .wp-block-column.specification-table-box .specification-table table  th ,.wp-block-column.specification-table-box .specification-table table  td { padding:12px 8px;  } 
+  /* Flock Homes Page End */
+  /* Trinity Page Start */
+  .trinity-info-section.feathers.blue-feathers:before                       { width:100px; height: 171px; background-size: 74% auto; left: -3%;}
+.trinity-location.feathers.yellow-feathers:before                           { height: 120px; width: 87px;  right: -8%;   }
+.trinity-section .img-heading img                                           { margin-right:4px; max-width:15%; }
+.trinity-info-section.about-page .wp-block-columns .wp-block-column.about-us-desc { padding-right:0; }
+.trinity-info-section.about-page.about-us-section.common-space              { padding-bottom:40px; }
+.testimonial-single.bottom-footer-padding                                   { padding-bottom:120px; }
+/* Trinity Page End */
+/* Active+Passive Page Start */
+.wp-block-columns.amenities-box                                             { margin:0 -5px; }
+.wp-block-columns .wp-block-column.features-items                           { margin:0 0 15px; padding:0 5px; flex-basis:50% !important; }
+.wp-block-columns .wp-block-column.features-items    h4                     { margin:10px 0 0;  }
+.organic-desc-box .wp-block-group .wp-block-group__inner-container h3       { margin:0 0 10px; }
+.organic-desc-box .wp-block-group .wp-block-group__inner-container p        { margin:0 0 10px; }
+.organic-desc-box .wp-block-group .wp-block-group__inner-container p:last-child { margin:0; }
+.organic-food-img-box .wp-block-group.food-img-content .food-img-1          { margin:0 0 20px !important; }
+.organic-food-img-box .wp-block-group.food-img-content .food-img-1 ,.organic-food-img-box .wp-block-group.food-img-content .food-img-2 { max-width:62% !important; }
+.right-bottom-feathers.feathers:before                                       { height: 218px; width: 110px; background-size: 95% auto; bottom:0%; right:-1%; left:auto; }
+.left-blue-feather.feathers.blue-feathers:before                            { height: 157px; width: 70px; top:0%; transform: rotate(7deg); left: -7px;  }
+.left-yellow-feathers.feathers.rotate-feathers.yellow-feathers::before      { top: 25%; width: 143px; height: 141px; left: -24%; background-size: 46% auto; }
+.wp-block-columns .wp-block-column.organic-desc-box.padding-right           {  padding-right:0; padding-left: 0; }
+.wp-block-columns .wp-block-column.organic-desc-box                         { margin-bottom:0; padding-left:0; padding-right:0; padding-top:87px; }
+#content .entry-content .organic-foodfarm-section .wp-block-kadence-rowlayout.alignfull.common-space { padding:0; } 
+p.sub-title                                                                 { max-width:100%; }
+/* Active+passive Page End */
+/* 404 Page  */
+.error-404  h1                                                              { font-size:80px; line-height:90px; }
+.error-404 h2                                                               { margin:0; }
+.error404 main p                                                            { margin-bottom:0px;  font-size: 14px; line-height:20px; }
+}
+/* Responsive Css End */
+@media(max-width:481px) {
+    .menu-item-has-children > a { width: calc(100% - 50px); display: inline-block;}
+    .menu-item-has-children > a + button { width: 45px; display: inline-block !important;}
+    .sub-menu {overflow: hidden; max-height: 0px; }
+    .menu-item-has-children button[aria-expanded="false"] + .sub-menu { transition-duration: 0.3s;}
+    .menu-item-has-children button[aria-expanded="true"] + .sub-menu { max-height: 500px; }
+    
+}
+@media (min-width:482px) and (max-width:767px) {
+    .menu-button-container { display: block;}
+    .primary-navigation > .primary-menu-container { 
+position: fixed;
+visibility: hidden;
+opacity: 0;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+padding-top: calc(var(--button--line-height) * var(--primary-nav--font-size-button) + 42px + 5px);
+padding-left: var(--global--spacing-unit);
+padding-right: var(--global--spacing-unit);
+padding-bottom: var(--global--spacing-horizontal);
+background-color: var(--global--color-background);
+transition: all 0.15s ease-in-out;
+transform: translateY(var(--global--spacing-vertical));
+height: 100vh;
+z-index: 499;
+overflow-x: hidden;
+overflow-y: auto;
+border: 2px solid transparent;
+margin: 0 !important;
+transition: all 0.5s ease;
+
+    }
+
+    .primary-navigation-open .primary-navigation > .primary-menu-container {
+        position: absolute;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .primary-navigation > div > .menu-wrapper li {
+        display: block !important;
+        position: relative;
+        width: 100%;
+    }
+    .menu-item-has-children > a { width: calc(100% - 40px); display: inline-block;}
+    .menu-item-has-children > a + button { display: inline-block !important;}
+
+    .primary-navigation > div > .menu-wrapper > li > .sub-menu {
+        left: 0;
+        margin: 0;
+        width: 100%;
+        min-width: max-content;
+        position: relative;
+        top: 100%;
+        padding-top: 3px;
+        transition: all 0.5s ease;
+        z-index: 88888;
+        overflow: hidden; 
+        max-height: 0px; 
+    }
+    .menu-item-has-children button[aria-expanded="false"] + .sub-menu { transition-duration: 0.3s;}
+    .menu-item-has-children button[aria-expanded="true"] + .sub-menu { max-height: 500px !important; }
+
+}
+@media(min-width:576px) and (max-width:767px)/* tablet */
+{ 
+    .wp-block-column.about-img-box .about-2 { right:53%; }
+    .wp-block-column.about-img-box .about-2, .wp-block-column.about-img-box .about-1 { max-width:28%; }
+    .about-page .wp-block-column.about-img-box .about-2, .about-page .wp-block-column.about-img-box .about-1 { max-width: 45%; }
+    .home .about-us-section .wp-block-column.about-img-box { margin:25px 0 0; }
+    .about-page .wp-block-column.about-img-box .about-2 { right:30%; }
+    .primary-navigation-open .menu-button-container { padding-right:0; }
+    .gallery-slider-section .gallery-slider .gallery-items .image-box { padding-top:74%; margin:0 10px; }
+    .arrows-small .slick-arrow.slick-next       { right:-22px; }
+    .arrows-small .slick-arrow.slick-prev       { left:-22px; }
+    .successful-project .wp-block-columns .wp-block-column.about-us-desc { padding-left:15px; }
+    .wp-block-columns .wp-block-column.specification-table-box { padding-right:15px; }
+    .wp-block-column.loc-desc-box               { padding-left:15px; text-align:left; }
+}
